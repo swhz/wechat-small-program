@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/cinema/cinema",
+    "pages/my/my",
+    "pages/details/details",
+    "pages/cinemaDetail/cinemaDetail",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/coupon/coupon",
+    "pages/memcard/memcard",
+    "pages/wantWatch/wantWatch",
+    "pages/watched/watched"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#FF4D64",
+    "navigationBarTitleText": "淘票",
+    "backgroundColor":"#FFF",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#1afa29",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "电影",
+      "iconPath": "images/movie.png",
+      "selectedIconPath": "images/movie-selected.png"
+    },{
+      "pagePath":"pages/cinema/cinema",
+      "text":"影院",
+      "iconPath":"images/cinema.png",
+      "selectedIconPath":"images/cinema-selected.png"
+    },{
+      "pagePath":"pages/my/my",
+      "text":"我的",
+      "iconPath":"images/my.png",
+      "selectedIconPath":"images/my-selected.png"
+    }]
+  }
+}

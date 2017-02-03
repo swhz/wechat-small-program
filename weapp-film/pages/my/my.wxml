@@ -1,0 +1,32 @@
+
+<!--pages/my/my.wxml-->
+
+<!--<text>pages/my/my.wxml</text>-->
+
+<!--<view class="my-body">-->
+<view class="my-list">
+  <view bindtap="navigatorTo" data-id="1" class="list-item">
+    <view class="list-item-title">我的订单</view>
+    <image src="../../images/arrowright.png" mode="aspectFill" class="list-item-img" />
+  </view>
+  <view bindtap="navigatorTo" data-id="2" class="list-item line">
+    <view class="list-item-title">优惠券</view>
+    <image src="../../images/arrowright.png" mode="aspectFill" class="list-item-img" />
+  </view>
+  <view bindtap="navigatorTo" data-id="3" class="list-item line">
+    <view class="list-item-title">影院会员卡</view>
+    <image src="../../images/arrowright.png" mode="aspectFill" class="list-item-img" />
+  </view>
+</view>
+<view class="my-list">
+  <view bindtap="navigatorTo" data-id="4" class="list-item">
+    <view class="list-item-title">想看的电影</view>
+    <image src="../../images/arrowright.png" mode="aspectFill" class="list-item-img" />
+  </view>
+  <view bindtap="navigatorTo" data-id="5" class="list-item line">
+    <view class="list-item-title">看过的电影</view>
+    <image src="../../images/arrowright.png" mode="aspectFill" class="list-item-img" />
+  </view>
+</view>
+
+<!--</view>-->

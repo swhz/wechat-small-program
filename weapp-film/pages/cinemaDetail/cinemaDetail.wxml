@@ -1,0 +1,90 @@
+
+<loading wx:if="{{loading}}">加载中...</loading>
+<view class="body" wx:else>
+  <view class="cinema-info">
+    <view class="cinema-name">
+      {{cinemaDetail.nm}}
+    </view>
+    <view class="cinema-addr">
+      {{cinemaDetail.addr}}
+    </view>
+    <view class="cinema-tel">
+      {{cinemaDetail.tel[0]}}
+    </view>
+  </view>
+  <view class="space-between"></view>
+  <view wx:if="{{movies.length==0}}" class="no-movies-info">
+    未查询到相关电影上映信息!
+  </view>
+  <view wx:else>
+    <view class="movies-list">
+      <view class="movies-title">
+        电影上映信息
+      </view>
+      <scroll-view scroll-x="true" class="movies-img-scroll" 
+        style="height:128px;width:100%;" scroll-left="{{scrollLeft}}" bindscroll="scrollChoose">
+        <block wx:for="{{movies}}" wx:key="item.id">
+          <view class="movie-img" style="{{index==0?'':''}}">
+              <image src="{{item.img}}" class="{{movieIndex==index?'big-img':'normal-img'}}" 
+                style="margin-left:{{index==0?left:'0'}}px;margin-right:{{index==movies.length-1?left:0}}px" 
+                bindtap="chooseMovie" data-index="{{index}}"/>
+          </view>
+        </block>
+      </scroll-view>
+        <view class="background-img" style="background-image:url({{movies[movieIndex].img}});"></view>
+      <view class="movie-info">
+        <view class="movie-title">
+          <text class="movie-name">{{movies[movieIndex].nm}}</text>
+          <text class="movie-sc" wx:if="{{movies[movieIndex].sc==0}}">暂无评分</text>
+          <text class="movie-sc" wx:else>{{movies[movieIndex].sc}}分</text>
+        </view>
+        <view class="movie-scm">
+          {{movies[movieIndex].ver}}
+        </view>
+      </view>
+    </view>
+    <view class="space-between"></view>
+    <view class="movie-show">
+      <scroll-view scroll-x="true" class="date-scroll" style="width:100%;">
+        <block wx:for="{{Dates}}" wx:key="item.slug">
+          <view class="show-date {{dateIndex==index?'show-selected':''}}" bindtap="chooseDate" 
+            data-index="{{index}}" style="{{index==0?'margin-left:20rpx;':''}}">
+            {{item.text}}
+          </view>
+        </block>
+      </scroll-view>
+      <view wx:if="{{DateShow[Dates[dateIndex].slug].length == 0}}" class="show-none">
+        今日场次已映完！
+      </view>
+      <block wx:for="{{DateShow[Dates[dateIndex].slug]}}" wx:key="item.showId">
+        <view class="show-info {{item.sell?'':'sell-false'}}" >
+          <view class="show-time">
+            <view class="show-tm">
+              {{item.tm}}
+            </view>
+            <view class="show-end">
+              {{item.end}}结束
+            </view>
+          </view>
+          <view class="show-body">
+            <view class="show-lang-tp">
+              {{item.lang}}{{item.tp}}
+            </view>
+            <view class="show-th">
+              {{item.th}}
+            </view>
+          </view>
+          <view class="show-price" wx:if="{{!item.sell}}">
+            已关闭售票
+          </view>
+          <view class="show-price" wx:else>
+            <text class="show-pr" wx:if="{{item.pr}}">￥{{item.pr}}</text>
+            <text class="show-sellPr">￥{{item.sellPr}}</text>
+          </view>
+          <view class="{{index==0?'':'show-line'}}">
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

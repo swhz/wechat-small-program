@@ -1,0 +1,35 @@
+
+<!--pages/cinema/cinema.wxml-->
+<loading wx:if="{{loading}}">加载中...</loading>
+<block wx:else>
+  <view class="body">
+    <scroll-view scroll-y="true" style="height:100%;">
+      <view class="cinemas">
+        <block wx:for="{{cinemadata}}" wx:key="item.id">
+          <view class="cinemas-item">
+            <view data-area="{{item.area}}" class="cinemas-info {{item.open?'cinemas-info-show':''}}" bindtap="cinemasToggle">
+              <view class="cinemas-info-title">
+                <text class="cinemas-info-name">{{item.area}}</text>
+                <text class="cinemas-info-num">({{item.cinemas.length}}家)</text>
+              </view>
+              <image src="../../images/arrowright.png" mode="aspectFill" class="cinemas-info-img" />
+            </view>
+            <view class="cinemas-list {{item.open?'cinemas-list-show':''}}">
+              <block wx:for="{{item.cinemas}}" wx:for-item="citem" wx:key="citem.id" wx:for-index="cindex">
+                <navigator url="../cinemaDetail/cinemaDetail?id={{citem.id}}" class="cinema">
+                  <view class="cinema-info">
+                    <view class="cinema-name">
+                      {{citem.nm}}
+                    </view>
+                    <view class="cinema-addr">{{citem.addr}}</view>
+                  </view>
+                  <view class="cinema-line {{cindex == 0 ? 'cinema-line-first' : ''}}"></view>
+                </navigator>
+              </block>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+</block>

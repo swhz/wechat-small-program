@@ -1,0 +1,79 @@
+.body{
+    overflow: hidden;
+}
+
+.cinemas-item{
+    border-bottom: 2rpx solid #D8D8D8;
+    background-color: #FFF;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cinemas-info{
+    display: flex;
+    padding: 40rpx;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cinemas-info-show .cinemas-info-img{
+    transform: rotate(-90deg);
+}
+
+.cinemas-info-title{
+    flex: 1;
+}
+
+.cinemas-info-img{
+    width: 32rpx;
+    height: 32rpx;
+    transition: transform .4s;
+    transform: rotate(90deg);
+}
+
+.cinemas-list{
+    display: none;
+}
+
+.cinemas-list-show{
+    display: block;
+}
+
+.cinema{
+    position: relative;
+    padding-top: 26rpx;
+    padding-bottom: 26rpx;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+}
+
+.cinema-name{
+    font-size: 40rpx;
+    font-family: "仿宋";
+    margin-bottom: 30rpx;
+}
+
+.cinema-addr{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+    font-size: 35rpx;
+    color: #999;
+}
+
+.cinema-line{
+    content: " ";
+    position: absolute;
+    left: 40rpx;
+    top: 0;
+    right: 0;
+    height: 2rpx;
+    background-color: #F0F0F0;
+}
+
+.cinema-line-first{
+    left: 0;
+    right: 0;
+    background-color: #D8D8D8;
+}

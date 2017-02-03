@@ -1,0 +1,27 @@
+/* pages/my/my.wxss */
+Page{
+    background-color: #fbf9fe;
+}
+.my-list{
+    margin-top: 25rpx;
+    background-color: #fff;
+    border-top: 3rpx solid #E0E0E0;
+    border-bottom: 3rpx solid #E0E0E0;
+}
+.list-item{
+    display: flex;
+    margin-left: 20rpx;
+    padding-right: 20rpx;
+    align-items: center;
+}
+.list-item-title{
+    flex: 1;
+    line-height: 100rpx;
+}
+.list-item-img{
+    width: 32rpx;
+    height: 32rpx;
+}
+.line{
+    border-top: 3rpx solid #E0E0E0;
+}
