@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/2048/2048",
+    "pages/clock/clock",
+    "pages/todo/todo"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "WeChat",
+    "backgroundColor": "#ffffff",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/2048/2048",
+      "text": "2048",
+      "iconPath": "images/2048.png",
+      "selectedIconPath": "images/2048-selected.png"
+    },{
+      "pagePath": "pages/clock/clock",
+      "text": "clock",
+      "iconPath": "images/clock.png",
+      "selectedIconPath": "images/clock-selected.png"
+    },{
+      "pagePath": "pages/todo/todo",
+      "text": "todo",
+      "iconPath": "images/todo.png",
+      "selectedIconPath": "images/todo-selected.png"
+    }]
+  }
+}

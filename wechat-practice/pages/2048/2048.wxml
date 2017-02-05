@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="game-body">
+    <view class="scores-container">
+      <view class="score-container">{{score}}</view>
+      <view class="best-container">{{highscore}}</view>
+    </view>
+    <view class="game-container">
+      <view class="game-message game-{{over ? (won ? 'won' : 'over') : ''}}">
+        <text class="over-msg">{{overMsg}}</text>
+        <view class="lower">
+          <text class="retry-button" bindtap="restart">再玩一次</text>
+        </view>
+      </view>
+      <view class="grid-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+        <view wx:for="{{grids}}" wx:for-index="rowIdx" wx:for-item="row" class="grid-row">
+          <view wx:for="{{row}}" wx:for-index="colIdx" wx:for-item="cell" class="grid-cell">
+            <view class="tile tile-64">
+              <view wx:if="{{cell}}" class="tile-inner">
+                {{cell.content}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="above-game">
+      <text class="restart-button" bindtap="restart">重新开始</text>
+    </view>
+  </view>
+</view>

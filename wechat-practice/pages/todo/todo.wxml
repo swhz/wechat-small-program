@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="todo">
+    <input class="new-todo"
+      placeholder="添加待办列表"
+      value="{{todo}}"
+      bindinput="bindTodoInput"
+    />
+    <button type="primary" class="new-todo-save" bindtap="saveTodo">添加</button>
+  </view>
+  <view class="filter">
+    <view bindtap="useFilter"
+      data-filter="all"
+      class="{{ filter === 'all' ? 'filter-item filter-active' : 'filter-item'}}"
+      >所有</view>
+    <view bindtap="useFilter"
+      data-filter="active"
+      class="{{ filter === 'active' ? 'filter-item filter-active' : 'filter-item'}}">待办</view>
+    <view bindtap="useFilter"
+      data-filter="completed"
+      class="{{ filter === 'completed' ? 'filter-item filter-active' : 'filter-item'}}"
+    >已完成</view>
+  </view>
+  <view class="todo-list">
+    <view class="todo-item" wx:for="{{filterTodos}}">
+      <icon bindtap="toggleTodo" class="todo-check"
+        data-todo-id="{{item.id}}"
+        type="{{ item.completed ? 'success_circle' : 'circle'}}" />
+      <text class="{{ item.completed ? 'todo-content todo-completed' : 'todo-content'}}">{{item.todo}}</text>
+      <icon bindtap="todoDel" class="todo-del" data-todo-id="{{item.id}}" type="cancel" />
+    </view>
+  </view>
+  <view class="todo-footer">
+    <button type="warn" bindtap="clearCompleted">清除完成项</button>
+    <button type="default" bindtap="syncData" class="sync">同步数据</button>
+  </view>
+</view>

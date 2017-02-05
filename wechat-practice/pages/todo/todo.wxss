@@ -1,0 +1,111 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.todo {
+  margin: 50rpx 20rpx 30rpx 20rpx;
+}
+
+.new-todo {
+  border: 2rpx solid #eee;
+  padding-left: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  height: 70rpx;
+  font-size: 35rpx;
+  vertical-align: middle;
+}
+
+.new-todo-save {
+  margin-top: 10rpx;
+  font-size: 35rpx
+}
+
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.filter-item {
+  flex: auto;
+  text-align: center;
+}
+
+.filter-active {
+  color: #1296db;
+  position: relative;
+}
+
+.filter-active::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0;
+  border: 2rpx solid #1296db;
+  left: 0;
+  bottom: -20rpx;
+}
+
+.todo-list {
+  padding-top: 20rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.todo-item {
+  display: flex;
+  height: 80rpx;
+  position: relative;
+}
+
+.todo-check {
+  margin-top: -6rpx;
+}
+
+.todo-del {
+  margin-top: -6rpx;
+  position: absolute;
+  right: 20rpx;
+}
+
+.todo-content {
+  margin-left: 20rpx;
+}
+
+.todo-completed {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+.todo-footer {
+  margin: 20rpx;
+}
+
+.todo-footer button {
+  font-size: 35rpx;
+  margin-top: 20rpx;
+}
+.todo-footer .sync {
+  background-color: #1296db;
+  color: #fff;
+}
