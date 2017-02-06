@@ -33,9 +33,14 @@
 
 .new-todo-save {
   margin-top: 10rpx;
-  font-size: 35rpx
+  font-size: 35rpx;
+  background-color: #1AAC19;
+  color: #fff;
 }
 
+.new-todo-hover {
+  background-color: lightseagreen;
+}
 
 .filter {
   display: flex;
@@ -105,7 +110,21 @@
   font-size: 35rpx;
   margin-top: 20rpx;
 }
+
+.todo-footer .clear {
+  background-color: #E64240;
+  color: #fff;
+}
+
+.todo-footer .clear-hover {
+  background-color: orangered;
+}
+
 .todo-footer .sync {
   background-color: #1296db;
   color: #fff;
+}
+
+.todo-footer .sync-hover {
+  background-color: deepskyblue;
 }

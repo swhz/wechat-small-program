@@ -9,7 +9,7 @@
       value="{{todo}}"
       bindinput="bindTodoInput"
     />
-    <button type="primary" class="new-todo-save" bindtap="saveTodo">添加</button>
+    <button class="new-todo-save" bindtap="saveTodo" hover-class="new-todo-hover">添加</button>
   </view>
   <view class="filter">
     <view bindtap="useFilter"
@@ -34,7 +34,7 @@
     </view>
   </view>
   <view class="todo-footer">
-    <button type="warn" bindtap="clearCompleted">清除完成项</button>
-    <button type="default" bindtap="syncData" class="sync">同步数据</button>
+    <button class="clear" bindtap="clearCompleted" hover-class="clear-hover">清除完成项</button>
+    <button type="default" bindtap="syncData" class="sync" hover-class="sync-hover">同步数据</button>
   </view>
 </view>
