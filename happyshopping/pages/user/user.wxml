@@ -1,0 +1,37 @@
+<!--pages/user/user.wxml-->
+<!--<text>pages/user/user.wxml</text>-->
+<view class="user-header">
+    <view class="user-img">
+        <view class="iconfont icon-weixin"></view>
+    </view>
+    <view class="weixin-login" bindtap="login">微信授权登录</view>
+</view>
+
+<view class="user-body">
+    <navigator url="" class="user-order-all">
+        <view class="order-all">全部订单</view>
+        <view class="order-look">查看<view class="iconfont icon-right"></view></view>
+    </navigator>
+    <view class="user-orders">
+        <navigator url="" class="order-item">
+            <view class="iconfont icon-group"></view>
+            <view class="order-item-text">待成团</view>
+        </navigator>
+        <navigator url="" class="order-item">
+            <view class="iconfont icon-pay"></view>
+            <view class="order-item-text">待付款</view>
+        </navigator>
+        <navigator url="" class="order-item">
+            <view class="iconfont icon-send"></view>
+            <view class="order-item-text">待发货</view>
+        </navigator>
+        <navigator url="" class="order-item">
+            <view class="iconfont icon-deliver"></view>
+            <view class="order-item-text">待收货</view>
+        </navigator>
+        <navigator url="" class="order-item">
+            <view class="iconfont icon-complete"></view>
+            <view class="order-item-text">已完成</view>
+        </navigator>
+    </view>
+</view>

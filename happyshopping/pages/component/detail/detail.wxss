@@ -1,0 +1,267 @@
+/* pages/component/detail/detail.wxss */
+.detail-img-box{
+    width: 100%;
+    height: 750rpx;
+}
+.detail-img-box swiper{
+    width: 100%;
+    height: 100%;
+}
+.detail-img{
+    width: 750rpx;
+    height: 750rpx;
+}
+.goods-info{
+    width: 100%;
+    /*background-color: #fff;*/
+}
+.info-title{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 35rpx;
+    background-color: #fff;
+}
+.info-price{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    padding-bottom: 20rpx;
+    display: flex;
+    flex-direction: row;
+    line-height: 60rpx;
+    background-color: #fff;
+}
+.info-nowPrice{
+    font-size: 35rpx;
+    color: #fb5d7d;
+}
+.info-oldPrice{
+    flex: 1;
+    font-size: 30rpx;
+    color: #999;
+    text-decoration: line-through;
+    padding-left: 15rpx;
+}
+.info-express{
+    font-size: 28rpx;
+    color: #999;
+}
+.info-address{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20rpx 30rpx;
+    font-size: 25rpx;
+    background-color: #ebebeb;
+    position: relative;
+}
+.info-address text{
+    display: block;
+    color: #999;
+}
+.info-address::after{
+    content: '';
+    position: absolute;
+    width: 20rpx;
+    height: 20rpx;
+    background-color: #ebebeb;
+    left: 50rpx;
+    top: -8rpx;
+    transform: rotate(45deg);
+}
+.info-group{
+    width: 100%;
+    background-color: #fff;
+}
+.group-play{
+    background-color: #fff;
+}
+.play-title{
+    font-size: 35rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    line-height: 80rpx;
+}
+.play-content{
+    margin: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    border-top: 1rpx solid #ddd;
+    justify-content: space-between;
+}
+.play-item{
+    /*flex: 1;*/
+    height: 120rpx;
+    display: flex;
+    align-items: center;
+}
+/*.play-item.last{
+    flex: 0 1 auto;
+}*/
+.play-item-img{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    background-color: #fb5d5d;
+}
+.play-item-text{
+    margin-left: 10rpx;
+    display: flex;
+    flex-direction: column;
+    font-size: 25rpx;
+}
+.group-tips{
+    background-color: #ebebeb;
+    line-height: 70rpx;
+    color: #fb5d7d;
+    text-align: center;
+    width: 100%;
+    font-size: 25rpx;
+}
+.group-list{
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 30rpx;
+}
+.list-title{
+    font-size: 35rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    line-height: 80rpx;
+}
+.list-item{
+    height: 100rpx;
+    margin: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    border-top: 1rpx solid #ddd;
+    align-items: center;
+}
+.user-img{
+    width: 60rpx;
+    height: 60rpx;
+}
+.user-img image{
+    width: 100%;
+    height: 100%;
+}
+.list-item-center{
+    margin-left: 15rpx;
+    flex: 1;
+    color: #777;
+}
+.user-name{
+    font-size: 30rpx;
+    line-height: 40rpx;
+}
+.time-rest{
+    font-size: 25rpx;
+}
+.endTime,.gap{
+    color: #fb5d7d;
+}
+.join-group{
+    width: 85rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 25rpx;
+    color: #fb5d7d;
+    border: 2rpx solid #fb5d7d;
+    border-radius: 5rpx;
+}
+.goods-desc{
+    background-color: #fff;
+    width: 100%;
+}
+.desc-title{
+    font-size: 35rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.desc-content{
+    width: 100%;
+}
+.desc-text{
+    font-size: 30rpx;
+    color: #666;
+    padding: 30rpx;
+}
+.desc-img{
+    width: 100%;
+    margin-top: 10rpx;
+}
+.desc-img image{
+    width: 750rpx;
+}
+.buy-tips-box{
+    margin-top: 20rpx;
+}
+.buy-tips-top{
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+}
+.buy-tips-item{
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+}
+.buy-tips-item-img{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    background-color: #fb5d5d;
+}
+.buy-tips-item-text{
+    margin-left: 10rpx;
+    font-size: 35rpx;
+}
+.buy-tips-text{
+    padding: 20rpx 30rpx;
+    font-size: 30rpx;
+    color: #fb5d7d;
+}
+.pay-box-box{
+    width: 100%;
+    height: 120rpx;
+}
+.pay-box{
+    width: 100%;
+    height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+.single-pay{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    color: #fff;
+}
+.group-pay{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:orangered;
+    color: #fff;
+}
+.text{
+    font-size: 30rpx;
+}
+.price{
+    font-size: 35rpx;
+}

@@ -1,0 +1,95 @@
+
+<!--banner轮播-->
+<!--<view class="body" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">-->
+<view>
+  <loading wx:if="{{loading}}">加载中...</loading>
+  <scroll-view scroll-y="true" bindscroll="getScrollTop" bindscrolltolower="loadData" class="scroll" scroll-top="{{scrollTop}}">
+    <!--<view class="refresh" wx:if="{{refresh}}">刷新中...</view>-->
+    <view class="banner">
+      <swiper indicator-dots="{{bannerConfig.indicatorDots}}" autoplay="{{bannerConfig.autoplay}}" interval="{{bannerConfig.interval}}" duration="{{bannerConfig.duration}}">
+        <block wx:for="{{bannerImgs}}" wx:key="item.banner_goodsId">
+          <swiper-item>
+            <navigator url="../component/detail/detail?id={{item.banner_goodsId}}&platformId={{item.banner_platformId}}">
+              <image src="{{item.banner_img}}" class="slide-image" width="750" height="300" mode="{{bannerConfig.mode}}" />
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!--activityImgs(活动图片展示)-->
+
+    <!--<view class="activityImgs">
+    <view class="activity-left">
+      <navigator url="../hot/hot" open-type="switchTab" class="navigator-hot">
+        <image src="{{activityUrls[0]}}" mode=""/>
+      </navigator>
+    </view>
+    <view class="activity-right">
+      <view class="activity-right-top">
+        <navigator url="../activity/tenGroup/tenGroup" class="navigator-tenGroup">
+          <image src="{{activityUrls[1]}}" mode="aspectFit"/>
+        </navigator>
+      </view>
+      <view class="activity-right-bottom">
+        <navigator url="../activity/discount/discount" class="navigator-discount">
+          <image src="{{activityUrls[2]}}" mode="aspectFit"/>
+        </navigator>
+        <navigator url="../activity/lists/lists" class="navigator-lists">
+          <image src="{{activityUrls[3]}}" mode="aspectFit"/>
+        </navigator>
+      </view>
+    </view>
+  </view>-->
+
+    <!--活动图片-->
+    <view class="home-hot">
+      <navigator class="hot-left" url="../hot/hot" open-type="switchTab">
+        <image mode="" src="{{activityUrls[0]}}"></image>
+      </navigator>
+      <view class="hot-right">
+        <navigator class="hot-right-top" url="../activity/tenGroup/tenGroup">
+          <image mode="aspectFit" src="{{activityUrls[1]}}"></image>
+        </navigator>
+        <view class="hot-right-btm">
+          <navigator class="hot-right-btm-left" url="../activity/discount/discount">
+            <image mode="aspectFit" src="{{activityUrls[2]}}"></image>
+          </navigator>
+          <navigator class="hot-right-btm-right" url="../activity/lists/lists">
+            <image mode="aspectFit" src="{{activityUrls[3]}}"></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+    <!--选项卡-->
+    <view class="navbar-box">
+      <scroll-view scroll-x="true" class="navbar {{fixed?'fixed':''}}" style="width:100%;">
+        <block wx:for="{{navItems}}" wx:key="item.tabId">
+          <view class="nav-item {{navIndex==index?'curNavigator':''}}" bindtap="chooseNav" data-index="{{index}}" data-tabType="{{item.tabFilterType}}" data-tabId="{{item.tabId}}" style="{{index==0?'margin-left:20rpx;':''}}">
+            {{item.tabName}}
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+
+    <!--商品列表-->
+    <view class="lists-box">
+      <navigator wx:for="{{list}}" wx:key="item.goods_id" class="item-box" url="../component/detail/detail?id={{item.goods_id}}">
+        <view class="item-img">
+          <image src="{{item.goods_img}}"></image>
+        </view>
+        <text class="item-title">{{item.goods_title}}</text>
+        <text class="item-content">{{item.goods_promote_info}}</text>
+        <view class="item-btm">
+          <view class="item-buy-people">
+            <view class="iconfont icon-people"></view>
+            {{item.goods_group_size}}人团
+          </view>
+          <view class="item-price">¥ {{item.goods_group_price}}0</view>
+        </view>
+      </navigator>
+    </view>
+    <text wx:if="{{noData}}" class="noData">没有更多内容了</text>
+  </scroll-view>
+</view>
